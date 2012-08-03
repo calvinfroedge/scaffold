@@ -6,7 +6,7 @@ require 'lib/exception/template_exception.php';
 require 'lib/exception/view_exception.php';
 
 /*
-* Singleton class which serves as a facade to the Template / View Classes
+* Multiton class which serves as a facade to the Template / View Classes
 */
 class Scaffold
 {
@@ -21,7 +21,7 @@ class Scaffold
 	private $viewDir;
 
 	/*
-	*	Singleton constructor must be private
+	*	Multiton constructor must be private
 	*/
 	private function __construct()
 	{
