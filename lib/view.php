@@ -76,7 +76,7 @@ class ScaffoldView
 	*/
 	public function render()
 	{
-		if(!file_exists($this->dir.$this->file)) throw new ScaffoldViewException("The view you are attempting to render does not exist.");
+		if(!file_exists($this->dir.$this->file) && !file_exists($this->dir.$this->file.'.php')) throw new ScaffoldViewException("The view you are attempting to render does not exist.");
 		ob_start();
 		
 		$embedded_views = array();
@@ -92,7 +92,10 @@ class ScaffoldView
 		$json  = json_encode($this->vars);
 		$array = array_merge(json_decode($json, true), $embedded_views);
 		extract($array);
-		include ($this->dir.$this->file);
+		$noExt = include ($this->dir.$this->file);
+		if(!$noExt){
+			include($this->dir.$this->file.'.php');
+		}
 		$contents = ob_get_contents();
 		ob_end_clean();
 

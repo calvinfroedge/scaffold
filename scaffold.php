@@ -123,6 +123,7 @@ class Scaffold
 		}
 
 		$newView = new ScaffoldView($this->viewDir, $file, $vars);
+		$newView->setDir($this->viewDir);
 
 		$this->views->$view = $newView;
 		
