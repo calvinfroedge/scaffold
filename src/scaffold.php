@@ -1,9 +1,9 @@
 <?php
 
-require 'lib/template.php';
-require 'lib/view.php';
-require 'lib/exception/template_exception.php';
-require 'lib/exception/view_exception.php';
+require 'template.php';
+require 'view.php';
+require 'exception/template_exception.php';
+require 'exception/view_exception.php';
 
 /*
 * Multiton class which serves as a facade to the Template / View Classes
