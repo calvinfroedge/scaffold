@@ -170,12 +170,16 @@ class Scaffold
 	/*
 	*	Render the template
 	*/
-	public function render($template = "default")
+	public function render($template = "default", $asData = false)
 	{
 		if(!isset($this->templates->$template)){
 			throw new ScaffoldTemplateException("The template you are attempting to get does not exist.");
 		}
 
+                if($asData){
+                	return $this->templates->$template->render();
+                }
+                
 		echo $this->templates->$template->render();
 	}
 }
