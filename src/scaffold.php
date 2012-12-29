@@ -175,11 +175,13 @@ class Scaffold
 		if(!isset($this->templates->$template)){
 			throw new ScaffoldTemplateException("The template you are attempting to get does not exist.");
 		}
+		
+		$return = trim($this->templates->$template->render());
 
-                if($asData){
-                	return $this->templates->$template->render();
-                }
+		if($asData){
+			return $return;
+		}
                 
-		echo $this->templates->$template->render();
+		echo $return;
 	}
 }
