@@ -2,4 +2,4 @@
 
 namespace Scaffold;
 
-class \ScaffoldViewException extends Exception{}
+class ScaffoldViewException extends \Exception{}
