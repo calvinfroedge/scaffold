@@ -1,5 +1,7 @@
 <?php
 
+namespace Scaffold;
+
 /*
 * A Collection of Views Which Form a Template
 */

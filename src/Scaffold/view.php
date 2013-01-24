@@ -1,5 +1,7 @@
 <?php
 
+namespace Scaffold;
+
 /*
 * A Class for Handling Views
 */
