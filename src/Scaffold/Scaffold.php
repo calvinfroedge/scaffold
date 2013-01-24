@@ -1,11 +1,11 @@
 <?php
 
+namespace Scaffold;
+
 require 'template.php';
 require 'view.php';
 require 'template_exception.php';
 require 'view_exception.php';
-
-namespace Scaffold;
 
 /*
 * Multiton class which serves as a facade to the Template / View Classes
