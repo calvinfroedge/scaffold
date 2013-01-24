@@ -1,5 +1,7 @@
 <?php
 
+namespace Scaffold;
+
 require 'template.php';
 require 'view.php';
 require 'exception/template_exception.php';
